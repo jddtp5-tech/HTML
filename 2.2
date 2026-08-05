@@ -1,0 +1,42 @@
+//register.html//
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+<style>
+body{text-align:center;font-family:Arial;background:lightblue;}
+form{background:white;width:300px;margin:50px auto;padding:20px;}
+input,button{width:90%;padding:8px;margin:8px;}
+#msg{color:red;}
+</style>
+</head>
+<body>
+
+<form onsubmit="return check()">
+<h2>Registration</h2>
+
+<input type="text" id="name" placeholder="Name"><br>
+
+<input type="text" id="email" placeholder="Email"><br>
+
+<input type="password" id="pass" placeholder="Password"><br>
+
+<button>Register</button>
+
+<p id="msg"></p>
+
+</form>
+
+<script>
+function check(){
+if(name.value=="" || email.value=="" || pass.value==""){
+msg.innerHTML="Fill all fields";
+return false;
+}
+alert("Registration Successful");
+return false;
+}
+</script>
+
+</body>
+</html>
