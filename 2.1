@@ -1,0 +1,54 @@
+//login.html//
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<style>
+body{text-align:center;font-family:Arial;background:lightblue;}
+form{background:white;width:250px;margin:100px auto;padding:20px;}
+input,button{width:90%;padding:8px;margin:8px;}
+#msg{color:red;}
+</style>
+</head>
+<body>
+
+<form id="login">
+<h2>Login</h2>
+
+<input type="text" id="email" placeholder="Email" required><br>
+
+<input type="password" id="pass" placeholder="Password" required><br>
+
+<button>Login</button>
+
+<p id="msg"></p>
+</form>
+
+<script>
+login.onsubmit=function(e){
+e.preventDefault();
+
+if(email.value=="user@gmail.com" && pass.value=="Admin123")
+location="home.html";
+else
+msg.innerHTML="Invalid Login";
+}
+</script>
+
+</body>
+</html>
+
+
+//home.html//
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+</head>
+<body style="text-align:center;font-family:Arial;">
+
+<h1>Login Successful!</h1>
+<p>Welcome to Home Page</p>
+
+</body>
+</html>
