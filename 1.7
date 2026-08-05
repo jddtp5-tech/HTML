@@ -1,0 +1,62 @@
+//shopframes.html//
+<!DOCTYPE html>
+<html>
+<frameset cols="25%,75%">
+    <frame src="categories.html">
+    <frame src="shoppingcart.html" name="cart">
+</frameset>
+</html>
+
+
+//categories.html//
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Category</h2>
+
+<a href="shoppingcart.html" target="cart">Groceries</a>
+
+</body>
+</html>
+
+//shoppingcart.html//
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{text-align:center;font-family:Arial;}
+img{width:250px;height:180px;}
+table{width:100%;border-collapse:collapse;}
+table,th,td{border:1px solid black;padding:5px;}
+</style>
+</head>
+<body>
+
+<h2>Shopping Cart</h2>
+
+<img src="rice.jpg"><br>
+
+<p>Rice - ₹100</p>
+
+<input type="button" value="Add to Cart">
+
+<br><br>
+
+<table>
+<tr>
+<th>Item</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>Rice</td>
+<td>₹100</td>
+</tr>
+</table>
+
+<br>
+
+<input type="button" value="Buy Now">
+
+</body>
+</html>
