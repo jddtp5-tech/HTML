@@ -1,0 +1,33 @@
+import java.io.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+import jakarta.servlet.*;
+
+@WebServlet("/CalculatorServlet")
+public class CalculatorServlet extends HttpServlet {
+
+    public void doPost(HttpServletRequest request,
+                       HttpServletResponse response)
+            throws ServletException, IOException {
+
+        double n1 = Double.parseDouble(request.getParameter("num1"));
+        double n2 = Double.parseDouble(request.getParameter("num2"));
+        String op = request.getParameter("op");
+
+        double result = 0;
+
+        if(op.equals("+"))
+            result = n1 + n2;
+        else if(op.equals("-"))
+            result = n1 - n2;
+        else if(op.equals("*"))
+            result = n1 * n2;
+        else if(op.equals("/"))
+            result = n1 / n2;
+
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        out.println("<h2>Result = " + result + "</h2>");
+    }
+}
